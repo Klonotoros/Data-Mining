@@ -1,0 +1,109 @@
+================================================================================
+BBC SPORT URL COLLECTION REPORT
+================================================================================
+Generated at: 2025-10-30 00:56:42
+
+SUMMARY:
+  Total categories processed: 42
+  Total URLs collected: 9085
+  Unique URLs (deduplicated): 9085
+
+================================================================================
+CATEGORY BREAKDOWN:
+================================================================================
+Category                                  URLs Status         
+--------------------------------------------------------------------------------
+football                                  4434 [OK] Active    
+rugby-union                                993 [OK] Active    
+cricket                                    982 [OK] Active    
+formula1                                   417 [OK] Active    
+boxing                                     385 [OK] Active    
+rugby-league                               335 [OK] Active    
+tennis                                     266 [OK] Active    
+american-football                          249 [OK] Active    
+mixed-martial-arts                         209 [OK] Active    
+darts                                      119 [OK] Active    
+athletics                                  101 [OK] Active    
+snooker                                     84 [OK] Active    
+olympics                                    73 [OK] Active    
+basketball                                  67 [OK] Active    
+netball                                     52 [OK] Active    
+golf                                        44 [OK] Active    
+baseball                                    29 [OK] Active    
+hockey                                      28 [OK] Active    
+motorsport                                  25 [OK] Active    
+swimming                                    22 [OK] Active    
+equestrian                                  19 [OK] Active    
+canoeing                                    15 [OK] Active    
+triathlon                                   13 [OK] Active    
+gymnastics                                  12 [OK] Active    
+squash                                      12 [OK] Active    
+diving                                      11 [OK] Active    
+horse-racing                                11 [OK] Active    
+rowing                                      11 [OK] Active    
+bowls                                       10 [OK] Active    
+cycling                                      8 [OK] Active    
+shooting                                     8 [OK] Active    
+badminton                                    7 [OK] Active    
+judo                                         7 [OK] Active    
+table-tennis                                 7 [OK] Active    
+fencing                                      6 [OK] Active    
+modern-pentathlon                            4 [OK] Active    
+taekwondo                                    4 [OK] Active    
+weightlifting                                3 [OK] Active    
+sailing                                      1 [OK] Active    
+volleyball                                   1 [OK] Active    
+water-polo                                   1 [OK] Active    
+disability-sport                             0 [EMPTY]        
+
+================================================================================
+TOP 10 CATEGORIES BY URL COUNT:
+================================================================================
+ 1. football                         4434 URLs
+    https://www.bbc.com/sport/football
+ 2. rugby-union                       993 URLs
+    https://www.bbc.com/sport/rugby-union
+ 3. cricket                           982 URLs
+    https://www.bbc.com/sport/cricket
+ 4. formula1                          417 URLs
+    https://www.bbc.com/sport/formula1
+ 5. boxing                            385 URLs
+    https://www.bbc.com/sport/boxing
+ 6. rugby-league                      335 URLs
+    https://www.bbc.com/sport/rugby-league
+ 7. tennis                            266 URLs
+    https://www.bbc.com/sport/tennis
+ 8. american-football                 249 URLs
+    https://www.bbc.com/sport/american-football
+ 9. mixed-martial-arts                209 URLs
+    https://www.bbc.com/sport/mixed-martial-arts
+10. darts                             119 URLs
+    https://www.bbc.com/sport/darts
+
+================================================================================
+CATEGORIES WITH FEW OR NO URLs (< 20 URLs):
+================================================================================
+  equestrian                           19 URLs
+  canoeing                             15 URLs
+  triathlon                            13 URLs
+  gymnastics                           12 URLs
+  squash                               12 URLs
+  diving                               11 URLs
+  horse-racing                         11 URLs
+  rowing                               11 URLs
+  bowls                                10 URLs
+  cycling                               8 URLs
+  shooting                              8 URLs
+  badminton                             7 URLs
+  judo                                  7 URLs
+  table-tennis                          7 URLs
+  fencing                               6 URLs
+  modern-pentathlon                     4 URLs
+  taekwondo                             4 URLs
+  weightlifting                         3 URLs
+  sailing                               1 URLs
+  volleyball                            1 URLs
+  water-polo                            1 URLs
+  disability-sport                      0 URLs
+
+================================================================================
