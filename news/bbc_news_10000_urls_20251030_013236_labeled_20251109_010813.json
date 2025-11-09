@@ -1,0 +1,552 @@
+{
+  "labeled_at": "2025-11-09T01:09:13.201235",
+  "total_urls": 100,
+  "input_file": "bbc_news_10000_urls_20251030_013236.json",
+  "articles": [
+    {
+      "url": "http://bbc.co.uk/news/articles/c4gd66q0q7go",
+      "category": "Business",
+      "labeled_at": "2025-11-09T01:08:14.890215"
+    },
+    {
+      "url": "http://bbc.co.uk/news/articles/c70rgkrr6rpo",
+      "category": "Essex",
+      "labeled_at": "2025-11-09T01:08:15.689980"
+    },
+    {
+      "url": "http://bbc.co.uk/news/articles/c798d4j1r07o",
+      "category": "Gloucestershire",
+      "labeled_at": "2025-11-09T01:08:16.469059"
+    },
+    {
+      "url": "http://bbc.co.uk/news/articles/cy7ypm6zxp2o",
+      "category": "US & Canada",
+      "labeled_at": "2025-11-09T01:08:17.269075"
+    },
+    {
+      "url": "http://bbc.com/news/articles/cdjzw3gplv7o",
+      "category": "unknown",
+      "labeled_at": "2025-11-09T01:08:18.606126"
+    },
+    {
+      "url": "https://bbc.co.uk/news/articles/cyv7n95472go",
+      "category": "Europe",
+      "labeled_at": "2025-11-09T01:08:19.552144"
+    },
+    {
+      "url": "https://bbc.com/news/articles/c0qdz1jne91o",
+      "category": "unknown",
+      "labeled_at": "2025-11-09T01:08:21.463135"
+    },
+    {
+      "url": "https://bbc.com/news/articles/c62666dl4r0o",
+      "category": "unknown",
+      "labeled_at": "2025-11-09T01:08:23.599195"
+    },
+    {
+      "url": "https://bbc.com/news/articles/cev1x77ngr3o",
+      "category": "unknown",
+      "labeled_at": "2025-11-09T01:08:25.565197"
+    },
+    {
+      "url": "https://bbc.com/news/articles/cvg7y52n411o",
+      "category": "unknown",
+      "labeled_at": "2025-11-09T01:08:27.623188"
+    },
+    {
+      "url": "https://feeds.bbci.co.uk/news/articles/cwy87802dw7o",
+      "category": "Northern Ireland",
+      "labeled_at": "2025-11-09T01:08:28.872062"
+    },
+    {
+      "url": "https://www.bbc.co.uk/news/articles/c035y602remo",
+      "category": "England",
+      "labeled_at": "2025-11-09T01:08:29.316323"
+    },
+    {
+      "url": "https://www.bbc.co.uk/news/articles/c03ldwy89y0o",
+      "category": "Gloucestershire",
+      "labeled_at": "2025-11-09T01:08:29.740323"
+    },
+    {
+      "url": "https://www.bbc.co.uk/news/articles/c0455k6g71eo",
+      "category": "Asia",
+      "labeled_at": "2025-11-09T01:08:30.201337"
+    },
+    {
+      "url": "https://www.bbc.co.uk/news/articles/c0455r06e2ro",
+      "category": "US & Canada",
+      "labeled_at": "2025-11-09T01:08:30.758336"
+    },
+    {
+      "url": "https://www.bbc.co.uk/news/articles/c0456x53w6zo",
+      "category": "Guernsey",
+      "labeled_at": "2025-11-09T01:08:31.267340"
+    },
+    {
+      "url": "https://www.bbc.co.uk/news/articles/c049kn7wlgxo",
+      "category": "Technology",
+      "labeled_at": "2025-11-09T01:08:31.711336"
+    },
+    {
+      "url": "https://www.bbc.co.uk/news/articles/c04d5gdl0dwo",
+      "category": "England",
+      "labeled_at": "2025-11-09T01:08:32.173337"
+    },
+    {
+      "url": "https://www.bbc.co.uk/news/articles/c04edqyzlv2o",
+      "category": "Wales",
+      "labeled_at": "2025-11-09T01:08:32.656856"
+    },
+    {
+      "url": "https://www.bbc.co.uk/news/articles/c04g93lrv5ro",
+      "category": "England",
+      "labeled_at": "2025-11-09T01:08:33.085858"
+    },
+    {
+      "url": "https://www.bbc.co.uk/news/articles/c04g9gypz3ro",
+      "category": "Nottinghamshire",
+      "labeled_at": "2025-11-09T01:08:33.549856"
+    },
+    {
+      "url": "https://www.bbc.co.uk/news/articles/c04glp477ygo",
+      "category": "Coventry & Warwickshire",
+      "labeled_at": "2025-11-09T01:08:33.981776"
+    },
+    {
+      "url": "https://www.bbc.co.uk/news/articles/c04gz1wx706o",
+      "category": "Technology",
+      "labeled_at": "2025-11-09T01:08:34.442515"
+    },
+    {
+      "url": "https://www.bbc.co.uk/news/articles/c04nzvqxgrro",
+      "category": "Wiltshire",
+      "labeled_at": "2025-11-09T01:08:34.996515"
+    },
+    {
+      "url": "https://www.bbc.co.uk/news/articles/c04p04lq27ko",
+      "category": "Middle East",
+      "labeled_at": "2025-11-09T01:08:35.445516"
+    },
+    {
+      "url": "https://www.bbc.co.uk/news/articles/c04q1979y1go",
+      "category": "England",
+      "labeled_at": "2025-11-09T01:08:36.095515"
+    },
+    {
+      "url": "https://www.bbc.co.uk/news/articles/c04q4np17z2o",
+      "category": "South Yorkshire",
+      "labeled_at": "2025-11-09T01:08:36.641515"
+    },
+    {
+      "url": "https://www.bbc.co.uk/news/articles/c04q4v64q05o",
+      "category": "UK",
+      "labeled_at": "2025-11-09T01:08:37.076515"
+    },
+    {
+      "url": "https://www.bbc.co.uk/news/articles/c04q662q575o",
+      "category": "Peterborough",
+      "labeled_at": "2025-11-09T01:08:37.621514"
+    },
+    {
+      "url": "https://www.bbc.co.uk/news/articles/c04r57n3qd3o",
+      "category": "Oxfordshire",
+      "labeled_at": "2025-11-09T01:08:38.108514"
+    },
+    {
+      "url": "https://www.bbc.co.uk/news/articles/c0562yg8558o",
+      "category": "Liverpool",
+      "labeled_at": "2025-11-09T01:08:38.571515"
+    },
+    {
+      "url": "https://www.bbc.co.uk/news/articles/c057n2v2rmdo",
+      "category": "Wiltshire",
+      "labeled_at": "2025-11-09T01:08:39.170515"
+    },
+    {
+      "url": "https://www.bbc.co.uk/news/articles/c057p26ze9qo",
+      "category": "Lincolnshire",
+      "labeled_at": "2025-11-09T01:08:39.595517"
+    },
+    {
+      "url": "https://www.bbc.co.uk/news/articles/c0593pq3e43o",
+      "category": "Somerset",
+      "labeled_at": "2025-11-09T01:08:40.135515"
+    },
+    {
+      "url": "https://www.bbc.co.uk/news/articles/c059ydyqe19o",
+      "category": "US & Canada",
+      "labeled_at": "2025-11-09T01:08:40.565204"
+    },
+    {
+      "url": "https://www.bbc.co.uk/news/articles/c05ed10zqj8o",
+      "category": "Middle East",
+      "labeled_at": "2025-11-09T01:08:41.124203"
+    },
+    {
+      "url": "https://www.bbc.co.uk/news/articles/c05ed5rgld3o",
+      "category": "Middle East",
+      "labeled_at": "2025-11-09T01:08:41.587203"
+    },
+    {
+      "url": "https://www.bbc.co.uk/news/articles/c05g05q386mo",
+      "category": "Norfolk",
+      "labeled_at": "2025-11-09T01:08:42.111202"
+    },
+    {
+      "url": "https://www.bbc.co.uk/news/articles/c05g2nm2dzvo",
+      "category": "Europe",
+      "labeled_at": "2025-11-09T01:08:42.581203"
+    },
+    {
+      "url": "https://www.bbc.co.uk/news/articles/c05l1eqdzzjo",
+      "category": "England",
+      "labeled_at": "2025-11-09T01:08:43.073205"
+    },
+    {
+      "url": "https://www.bbc.co.uk/news/articles/c05lv3qqvjvo",
+      "category": "Hampshire & Isle of Wight",
+      "labeled_at": "2025-11-09T01:08:43.532204"
+    },
+    {
+      "url": "https://www.bbc.co.uk/news/articles/c05lz82vpljo",
+      "category": "Oxfordshire",
+      "labeled_at": "2025-11-09T01:08:44.082204"
+    },
+    {
+      "url": "https://www.bbc.co.uk/news/articles/c05m9g7ezp2o",
+      "category": "Isle of Man",
+      "labeled_at": "2025-11-09T01:08:44.567090"
+    },
+    {
+      "url": "https://www.bbc.co.uk/news/articles/c05pmmzp63zo",
+      "category": "BBC InDepth",
+      "labeled_at": "2025-11-09T01:08:45.126089"
+    },
+    {
+      "url": "https://www.bbc.co.uk/news/articles/c05z0gz9d83o",
+      "category": "Somerset",
+      "labeled_at": "2025-11-09T01:08:45.780069"
+    },
+    {
+      "url": "https://www.bbc.co.uk/news/articles/c0666zr4010o",
+      "category": "Business",
+      "labeled_at": "2025-11-09T01:08:46.256466"
+    },
+    {
+      "url": "https://www.bbc.co.uk/news/articles/c07141v3k3ro",
+      "category": "Scotland",
+      "labeled_at": "2025-11-09T01:08:46.692164"
+    },
+    {
+      "url": "https://www.bbc.co.uk/news/articles/c071e7x80djo",
+      "category": "Glasgow & West Scotland",
+      "labeled_at": "2025-11-09T01:08:47.144216"
+    },
+    {
+      "url": "https://www.bbc.co.uk/news/articles/c071jr159p0o",
+      "category": "BBC InDepth",
+      "labeled_at": "2025-11-09T01:08:47.576390"
+    },
+    {
+      "url": "https://www.bbc.co.uk/news/articles/c07d384l54vo",
+      "category": "NE, Orkney & Shetland",
+      "labeled_at": "2025-11-09T01:08:48.093437"
+    },
+    {
+      "url": "https://www.bbc.co.uk/news/articles/c07d3v7pz10o",
+      "category": "Wiltshire",
+      "labeled_at": "2025-11-09T01:08:48.562439"
+    },
+    {
+      "url": "https://www.bbc.co.uk/news/articles/c07e3j3ny44o",
+      "category": "Culture",
+      "labeled_at": "2025-11-09T01:08:49.072435"
+    },
+    {
+      "url": "https://www.bbc.co.uk/news/articles/c07g73p4805o",
+      "category": "Business",
+      "labeled_at": "2025-11-09T01:08:49.532462"
+    },
+    {
+      "url": "https://www.bbc.co.uk/news/articles/c07ggv79nmvo",
+      "category": "Hull & East Yorkshire",
+      "labeled_at": "2025-11-09T01:08:50.098401"
+    },
+    {
+      "url": "https://www.bbc.co.uk/news/articles/c07k0xz9xn7o",
+      "category": "England",
+      "labeled_at": "2025-11-09T01:08:50.639400"
+    },
+    {
+      "url": "https://www.bbc.co.uk/news/articles/c07k9g0108jo",
+      "category": "Wolverhampton",
+      "labeled_at": "2025-11-09T01:08:51.137435"
+    },
+    {
+      "url": "https://www.bbc.co.uk/news/articles/c07kgd8xpz3o",
+      "category": "Wales",
+      "labeled_at": "2025-11-09T01:08:51.782433"
+    },
+    {
+      "url": "https://www.bbc.co.uk/news/articles/c07kvy7ek7vo",
+      "category": "Norfolk",
+      "labeled_at": "2025-11-09T01:08:52.282468"
+    },
+    {
+      "url": "https://www.bbc.co.uk/news/articles/c07mk59pzkpo",
+      "category": "Business",
+      "labeled_at": "2025-11-09T01:08:52.765466"
+    },
+    {
+      "url": "https://www.bbc.co.uk/news/articles/c07mpdngz4mo",
+      "category": "Wales",
+      "labeled_at": "2025-11-09T01:08:53.267476"
+    },
+    {
+      "url": "https://www.bbc.co.uk/news/articles/c07mz10m1k9o",
+      "category": "Business",
+      "labeled_at": "2025-11-09T01:08:53.731508"
+    },
+    {
+      "url": "https://www.bbc.co.uk/news/articles/c07mzye39djo",
+      "category": "UK",
+      "labeled_at": "2025-11-09T01:08:54.183512"
+    },
+    {
+      "url": "https://www.bbc.co.uk/news/articles/c07pr54dxzxo",
+      "category": "Politics",
+      "labeled_at": "2025-11-09T01:08:54.625508"
+    },
+    {
+      "url": "https://www.bbc.co.uk/news/articles/c07v24elr8xo",
+      "category": "England",
+      "labeled_at": "2025-11-09T01:08:55.071537"
+    },
+    {
+      "url": "https://www.bbc.co.uk/news/articles/c07v3kgy2lko",
+      "category": "Africa",
+      "labeled_at": "2025-11-09T01:08:55.510550"
+    },
+    {
+      "url": "https://www.bbc.co.uk/news/articles/c07vkln2ezro",
+      "category": "Africa",
+      "labeled_at": "2025-11-09T01:08:55.951550"
+    },
+    {
+      "url": "https://www.bbc.co.uk/news/articles/c07vn1y2jz2o",
+      "category": "UK",
+      "labeled_at": "2025-11-09T01:08:56.484549"
+    },
+    {
+      "url": "https://www.bbc.co.uk/news/articles/c07vy5m58n0o",
+      "category": "Coventry & Warwickshire",
+      "labeled_at": "2025-11-09T01:08:56.956549"
+    },
+    {
+      "url": "https://www.bbc.co.uk/news/articles/c07vyjpn2mzo",
+      "category": "England",
+      "labeled_at": "2025-11-09T01:08:57.385193"
+    },
+    {
+      "url": "https://www.bbc.co.uk/news/articles/c0d7wxv243eo",
+      "category": "Bristol",
+      "labeled_at": "2025-11-09T01:08:57.814972"
+    },
+    {
+      "url": "https://www.bbc.co.uk/news/articles/c0del0z2rgpo",
+      "category": "Kent",
+      "labeled_at": "2025-11-09T01:08:58.253971"
+    },
+    {
+      "url": "https://www.bbc.co.uk/news/articles/c0e959gd5wro",
+      "category": "England",
+      "labeled_at": "2025-11-09T01:08:58.726975"
+    },
+    {
+      "url": "https://www.bbc.co.uk/news/articles/c0e9xx9qg53o",
+      "category": "Essex",
+      "labeled_at": "2025-11-09T01:08:59.287004"
+    },
+    {
+      "url": "https://www.bbc.co.uk/news/articles/c0egy79qx93o",
+      "category": "BBC InDepth",
+      "labeled_at": "2025-11-09T01:08:59.778899"
+    },
+    {
+      "url": "https://www.bbc.co.uk/news/articles/c0el31nqnpvo",
+      "category": "Business",
+      "labeled_at": "2025-11-09T01:09:00.325959"
+    },
+    {
+      "url": "https://www.bbc.co.uk/news/articles/c0epennv98lo",
+      "category": "Technology",
+      "labeled_at": "2025-11-09T01:09:00.830959"
+    },
+    {
+      "url": "https://www.bbc.co.uk/news/articles/c0epzp21z47o",
+      "category": "World",
+      "labeled_at": "2025-11-09T01:09:01.274960"
+    },
+    {
+      "url": "https://www.bbc.co.uk/news/articles/c0eqp9ejjvdo",
+      "category": "BBC InDepth",
+      "labeled_at": "2025-11-09T01:09:01.731805"
+    },
+    {
+      "url": "https://www.bbc.co.uk/news/articles/c0ew2exrzwqo",
+      "category": "North Yorkshire",
+      "labeled_at": "2025-11-09T01:09:02.235682"
+    },
+    {
+      "url": "https://www.bbc.co.uk/news/articles/c0ewe4p9128o",
+      "category": "Climate",
+      "labeled_at": "2025-11-09T01:09:02.670533"
+    },
+    {
+      "url": "https://www.bbc.co.uk/news/articles/c0ewr870z23o",
+      "category": "Middle East",
+      "labeled_at": "2025-11-09T01:09:03.152680"
+    },
+    {
+      "url": "https://www.bbc.co.uk/news/articles/c0ex172rxwzo",
+      "category": "Politics",
+      "labeled_at": "2025-11-09T01:09:03.603321"
+    },
+    {
+      "url": "https://www.bbc.co.uk/news/articles/c0ex1jq9pdvo",
+      "category": "World",
+      "labeled_at": "2025-11-09T01:09:04.123583"
+    },
+    {
+      "url": "https://www.bbc.co.uk/news/articles/c0ex921dylyo",
+      "category": "Manchester",
+      "labeled_at": "2025-11-09T01:09:04.591698"
+    },
+    {
+      "url": "https://www.bbc.co.uk/news/articles/c0exgrgd9w2o",
+      "category": "UK",
+      "labeled_at": "2025-11-09T01:09:06.050464"
+    },
+    {
+      "url": "https://www.bbc.co.uk/news/articles/c0exgrvw9gyo",
+      "category": "Europe",
+      "labeled_at": "2025-11-09T01:09:06.555951"
+    },
+    {
+      "url": "https://www.bbc.co.uk/news/articles/c0ez2p32wgpo",
+      "category": "Dorset",
+      "labeled_at": "2025-11-09T01:09:07.007838"
+    },
+    {
+      "url": "https://www.bbc.co.uk/news/articles/c0ezpyjrj9no",
+      "category": "Dorset",
+      "labeled_at": "2025-11-09T01:09:07.447936"
+    },
+    {
+      "url": "https://www.bbc.co.uk/news/articles/c0ezv1yplzxo",
+      "category": "Manchester",
+      "labeled_at": "2025-11-09T01:09:07.970806"
+    },
+    {
+      "url": "https://www.bbc.co.uk/news/articles/c0ezvndz05zo",
+      "category": "NE, Orkney & Shetland",
+      "labeled_at": "2025-11-09T01:09:08.406727"
+    },
+    {
+      "url": "https://www.bbc.co.uk/news/articles/c0ezyw8d997o",
+      "category": "Glasgow & West Scotland",
+      "labeled_at": "2025-11-09T01:09:08.846968"
+    },
+    {
+      "url": "https://www.bbc.co.uk/news/articles/c0j10420e2jo",
+      "category": "Business",
+      "labeled_at": "2025-11-09T01:09:09.309981"
+    },
+    {
+      "url": "https://www.bbc.co.uk/news/articles/c0j29yy4yp3o",
+      "category": "NE, Orkney & Shetland",
+      "labeled_at": "2025-11-09T01:09:09.730473"
+    },
+    {
+      "url": "https://www.bbc.co.uk/news/articles/c0j42zqgj2xo",
+      "category": "Norfolk",
+      "labeled_at": "2025-11-09T01:09:10.229854"
+    },
+    {
+      "url": "https://www.bbc.co.uk/news/articles/c0j73edw37qo",
+      "category": "Leicestershire",
+      "labeled_at": "2025-11-09T01:09:10.726321"
+    },
+    {
+      "url": "https://www.bbc.co.uk/news/articles/c0j995x3707o",
+      "category": "Manchester",
+      "labeled_at": "2025-11-09T01:09:11.273862"
+    },
+    {
+      "url": "https://www.bbc.co.uk/news/articles/c0j9zn553q4o",
+      "category": "World",
+      "labeled_at": "2025-11-09T01:09:11.809678"
+    },
+    {
+      "url": "https://www.bbc.co.uk/news/articles/c0jdgp6n45po",
+      "category": "Technology",
+      "labeled_at": "2025-11-09T01:09:12.257287"
+    },
+    {
+      "url": "https://www.bbc.co.uk/news/articles/c0jjnj4znvpo",
+      "category": "England",
+      "labeled_at": "2025-11-09T01:09:12.690059"
+    },
+    {
+      "url": "https://www.bbc.co.uk/news/articles/c0jjq2vynq7o",
+      "category": "Europe",
+      "labeled_at": "2025-11-09T01:09:13.201235"
+    }
+  ],
+  "category_counts": {
+    "Business": 7,
+    "Essex": 2,
+    "Gloucestershire": 2,
+    "US & Canada": 3,
+    "unknown": 5,
+    "Europe": 4,
+    "Northern Ireland": 1,
+    "England": 10,
+    "Asia": 1,
+    "Guernsey": 1,
+    "Technology": 4,
+    "Wales": 3,
+    "Nottinghamshire": 1,
+    "Coventry & Warwickshire": 2,
+    "Wiltshire": 3,
+    "Middle East": 4,
+    "South Yorkshire": 1,
+    "UK": 4,
+    "Peterborough": 1,
+    "Oxfordshire": 2,
+    "Liverpool": 1,
+    "Lincolnshire": 1,
+    "Somerset": 2,
+    "Norfolk": 3,
+    "Hampshire & Isle of Wight": 1,
+    "Isle of Man": 1,
+    "BBC InDepth": 4,
+    "Scotland": 1,
+    "Glasgow & West Scotland": 2,
+    "NE, Orkney & Shetland": 3,
+    "Culture": 1,
+    "Hull & East Yorkshire": 1,
+    "Wolverhampton": 1,
+    "Politics": 2,
+    "Africa": 2,
+    "Bristol": 1,
+    "Kent": 1,
+    "World": 3,
+    "North Yorkshire": 1,
+    "Climate": 1,
+    "Manchester": 3,
+    "Dorset": 2,
+    "Leicestershire": 1
+  }
+}
