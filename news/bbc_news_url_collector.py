@@ -110,8 +110,10 @@ class BBCNewsURLCollector:
         
         return True
     
-    def collect_urls_from_news(self, max_urls: int = 10000, save_on_interrupt: bool = False, timestamp: str = None) -> Set[str]:
-        """Collect article URLs from BBC News"""
+    def collect_urls_from_news(self, max_urls: int = None, save_on_interrupt: bool = False, 
+                                 timestamp: str = None, checkpoint_callback: callable = None, 
+                                 checkpoint_interval: int = 1000) -> Set[str]:
+        """Collect article URLs from BBC News - unlimited if max_urls is None"""
         news_url = "https://www.bbc.com/news"
         news_articles_url = "https://www.bbc.com/news/articles"
         
@@ -122,8 +124,13 @@ class BBCNewsURLCollector:
         
         print(f"    Collecting URLs from: {news_url}")
         print(f"    Also checking: {news_articles_url}")
-        print(f"    Target: {max_urls} unique article URLs")
+        if max_urls is None:
+            print(f"    Target: Unlimited unique article URLs")
+        else:
+            print(f"    Target: {max_urls} unique article URLs")
         print(f"    Category: news")
+        if checkpoint_callback:
+            print(f"    Checkpoint interval: every {checkpoint_interval} URLs")
         
         page_num = 0
         # Track URL count stability: if it doesn't change for 3 consecutive 10-page intervals, stop
@@ -132,8 +139,8 @@ class BBCNewsURLCollector:
         
         try:
             while pages_to_check:
-                # Stop if we've found enough URLs
-                if len(article_urls) >= max_urls:
+                # Stop if we've found enough URLs (only if limit is set)
+                if max_urls is not None and len(article_urls) >= max_urls:
                     print(f"    [OK] Reached {max_urls} URLs limit. Stopping search.")
                     break
                 
@@ -149,8 +156,14 @@ class BBCNewsURLCollector:
                         # We have a previous interval to compare with
                         if current_url_count == last_url_count_at_interval:
                             consecutive_unchanged_intervals += 1
-                            if consecutive_unchanged_intervals >= 3:
+                            # Only stop if we have a limit or if we've checked many pages without progress
+                            if max_urls is not None and consecutive_unchanged_intervals >= 3:
                                 print(f"    [OK] URL count unchanged for 3 consecutive intervals (30 pages). Stopping search.")
+                                print(f"    [OK] Final count: {current_url_count} URLs after checking {page_num} pages")
+                                break
+                            # For unlimited, be more lenient - only stop after more intervals
+                            elif max_urls is None and consecutive_unchanged_intervals >= 10:
+                                print(f"    [OK] URL count unchanged for 10 consecutive intervals (100 pages). Stopping search.")
                                 print(f"    [OK] Final count: {current_url_count} URLs after checking {page_num} pages")
                                 break
                         else:
@@ -169,8 +182,8 @@ class BBCNewsURLCollector:
                 links = soup.find_all('a', href=True)
                 
                 for link in links:
-                    # Stop if we've reached the limit
-                    if len(article_urls) >= max_urls:
+                    # Stop if we've reached the limit (only if limit is set)
+                    if max_urls is not None and len(article_urls) >= max_urls:
                         break
                     
                     href = link.get('href')
@@ -190,8 +203,15 @@ class BBCNewsURLCollector:
                     if self.is_news_article_url(clean_url) and self.url_belongs_to_news(clean_url):
                         article_urls.add(clean_url)
                         
+                        # Save checkpoint every N URLs
+                        if checkpoint_callback and len(article_urls) > 0:
+                            if len(article_urls) % checkpoint_interval == 0:
+                                print(f"\n    [CHECKPOINT] Saving checkpoint at {len(article_urls)} URLs...")
+                                checkpoint_callback(list(article_urls), timestamp)
+                                print(f"    [OK] Checkpoint saved\n")
+                        
                         # Stop immediately if we hit the limit after adding a URL
-                        if len(article_urls) >= max_urls:
+                        if max_urls is not None and len(article_urls) >= max_urls:
                             print(f"    [OK] Reached {max_urls} URLs. Stopping search.")
                             break
                     
@@ -252,8 +272,8 @@ class BBCNewsURLCollector:
                                     pages_to_check.append(clean_date_url)
                                     pages_checked.add(clean_date_url)
                 
-                # Check if we've reached the limit before continuing to next page
-                if len(article_urls) >= max_urls:
+                # Check if we've reached the limit before continuing to next page (only if limit is set)
+                if max_urls is not None and len(article_urls) >= max_urls:
                     break
                 
                 time.sleep(0.1)  # Small delay between page checks
@@ -283,23 +303,28 @@ class BBCNewsURLCollector:
         return article_urls
 
 
-def save_news_checkpoint(news_data: dict, timestamp: str, output_dir: Path = None):
+def save_news_checkpoint(news_data: dict, timestamp: str, output_dir: Path = None, checkpoint_num: int = None):
     """Save a checkpoint JSON file for news URLs"""
-    # Use script directory if not specified
+    # Use news/urls directory if not specified
     if output_dir is None:
-        output_dir = SCRIPT_DIR
+        output_dir = SCRIPT_DIR / 'urls'
     
     # Ensure output directory exists
     output_dir.mkdir(parents=True, exist_ok=True)
     
-    filename = output_dir / f'bbc_news_{news_data["url_count"]}_urls_{timestamp}.json'
+    # If checkpoint_num is provided, use it in filename
+    if checkpoint_num is not None:
+        filename = output_dir / f'bbc_news_checkpoint_{checkpoint_num}_{news_data["url_count"]}_urls_{timestamp}.json'
+    else:
+        filename = output_dir / f'bbc_news_{news_data["url_count"]}_urls_{timestamp}.json'
     
     checkpoint_data = {
         'scraped_at': datetime.now().isoformat(),
         'category': news_data['category'],
         'category_url': news_data['category_url'],
         'url_count': news_data['url_count'],
-        'urls': news_data['urls']
+        'urls': news_data['urls'],
+        'is_checkpoint': checkpoint_num is not None
     }
     
     with open(filename, 'w', encoding='utf-8') as f:
@@ -308,20 +333,34 @@ def save_news_checkpoint(news_data: dict, timestamp: str, output_dir: Path = Non
     return str(filename)
 
 
-def collect_news_urls(max_urls: int = 10000):
-    """Collect article URLs from BBC News"""
+def collect_news_urls(max_urls: int = None, checkpoint_interval: int = 1000):
+    """Collect article URLs from BBC News
+    
+    Args:
+        max_urls: Maximum URLs to collect (None for unlimited)
+        checkpoint_interval: Save checkpoint every N URLs (default: 1000)
+    """
     
     collector = BBCNewsURLCollector()
     
     # Create timestamp for all files
     timestamp = datetime.now().strftime("%Y%m%d_%H%M%S")
     
+    # Create news/urls directory for checkpoints
+    urls_dir = SCRIPT_DIR / 'urls'
+    urls_dir.mkdir(parents=True, exist_ok=True)
+    
     print("="*80)
     print("BBC NEWS URL COLLECTOR")
     print("="*80)
     print(f"Collecting URLs from: https://www.bbc.com/news")
     print(f"Focus: /news/articles/ pattern")
-    print(f"Target: {max_urls} URLs")
+    if max_urls is None:
+        print(f"Target: Unlimited URLs")
+    else:
+        print(f"Target: {max_urls} URLs")
+    print(f"Checkpoint interval: every {checkpoint_interval} URLs")
+    print(f"Checkpoint directory: {urls_dir}")
     print(f"Mode: URL collection only (no content scraping)")
     print("="*80)
     print()
@@ -329,10 +368,27 @@ def collect_news_urls(max_urls: int = 10000):
     try:
         print("[1/1] Category: news")
         
+        # Checkpoint callback function
+        checkpoint_count = [0]  # Use list to allow modification in nested function
+        
+        def save_checkpoint(urls_list: list, ts: str):
+            """Save checkpoint file"""
+            checkpoint_count[0] += 1
+            news_data = {
+                'category': 'news',
+                'category_url': 'https://www.bbc.com/news',
+                'url_count': len(urls_list),
+                'urls': sorted(list(urls_list))
+            }
+            checkpoint_file = save_news_checkpoint(news_data, ts, output_dir=urls_dir, checkpoint_num=checkpoint_count[0])
+            print(f"    [OK] Checkpoint saved: {checkpoint_file}")
+        
         news_urls = collector.collect_urls_from_news(
             max_urls=max_urls,
             save_on_interrupt=True,
-            timestamp=timestamp
+            timestamp=timestamp,
+            checkpoint_callback=save_checkpoint if max_urls is None or max_urls > checkpoint_interval else None,
+            checkpoint_interval=checkpoint_interval
         )
         
         news_data = {
@@ -342,9 +398,11 @@ def collect_news_urls(max_urls: int = 10000):
             'urls': sorted(list(news_urls))
         }
         
-        # Save checkpoint for news
-        checkpoint_filename = save_news_checkpoint(news_data, timestamp)
-        print(f"    [OK] Checkpoint saved: {checkpoint_filename}")
+        # Save final checkpoint for news
+        checkpoint_filename = save_news_checkpoint(news_data, timestamp, output_dir=urls_dir)
+        print(f"    [OK] Final checkpoint saved: {checkpoint_filename}")
+        if checkpoint_count[0] > 0:
+            print(f"    [OK] Total checkpoints during collection: {checkpoint_count[0]}")
         print(f"    Total URLs collected: {len(news_urls)}")
         print()
         
@@ -379,9 +437,8 @@ def collect_news_urls(max_urls: int = 10000):
         print("Saving progress...")
         
         # Try to load partial checkpoint data if it was saved
-        output_dir = SCRIPT_DIR
         checkpoint_pattern = f'bbc_news_*_{timestamp}.json'
-        checkpoint_files = glob.glob(str(output_dir / checkpoint_pattern))
+        checkpoint_files = glob.glob(str(urls_dir / checkpoint_pattern))
         
         # Try to load any partial checkpoints
         news_data = None
@@ -427,9 +484,9 @@ def collect_news_urls(max_urls: int = 10000):
 
 if __name__ == "__main__":
     # Collect URLs from BBC News
-    # Target: 10,000 URLs
+    # Unlimited URLs, checkpoint every 1000 URLs
     try:
-        results = collect_news_urls(max_urls=10000)
+        results = collect_news_urls(max_urls=None, checkpoint_interval=1000)
     except KeyboardInterrupt:
         # Already handled in collect_news_urls, just exit cleanly
         print("\nExiting...")
