@@ -1,0 +1,18 @@
+{
+  "total_articles": 11693,
+  "confidence_stats": {
+    "mean": 98.14536074576044,
+    "median": 100.0,
+    "min": 35.85166532095467,
+    "max": 100.0,
+    "std": 7.207748025511285
+  },
+  "label_distribution": {
+    "World": 2027,
+    "Business": 1932,
+    "Culture": 2549,
+    "Politics": 2754,
+    "Technology": 1479,
+    "Health": 952
+  }
+}

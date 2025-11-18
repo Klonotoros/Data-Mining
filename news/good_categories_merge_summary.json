@@ -1,0 +1,48 @@
+{
+  "merge_date": "2025-11-18T14:51:32.810528",
+  "original_count": 1583,
+  "added_count": 11693,
+  "total_count": 13276,
+  "min_confidence_threshold": 0,
+  "filtered_out_count": 0,
+  "category_distribution": {
+    "Business": 2320,
+    "Politics": 3180,
+    "Culture": 2768,
+    "Health": 1052,
+    "Technology": 1679,
+    "World": 2277
+  },
+  "category_changes": {
+    "Business": {
+      "before": 388,
+      "added": 1932,
+      "after": 2320
+    },
+    "Politics": {
+      "before": 426,
+      "added": 2754,
+      "after": 3180
+    },
+    "Culture": {
+      "before": 219,
+      "added": 2549,
+      "after": 2768
+    },
+    "Health": {
+      "before": 100,
+      "added": 952,
+      "after": 1052
+    },
+    "Technology": {
+      "before": 200,
+      "added": 1479,
+      "after": 1679
+    },
+    "World": {
+      "before": 250,
+      "added": 2027,
+      "after": 2277
+    }
+  }
+}
