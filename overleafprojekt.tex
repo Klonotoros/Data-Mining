@@ -499,5 +499,26 @@ BERT embeddings achieved the best results, as they provide rich contextual repre
 
 \section{Summary}
 
+Table~\ref{tab:news_all_comparison} provides a comprehensive comparison of all tested approaches for news article classification, showing accuracy results across different models and vectorization/embedding methods.
+
+\begin{table}[h]
+\centering
+\begin{tabular}{lccccc}
+\toprule
+Model & CountVectorizer & TF-IDF & Word2Vec & BERT & Random \\
+\midrule
+Naive Bayes & 86.07\% & 85.86\% & 73.43\% & --- & --- \\
+LinearSVC & 80.00\% & 86.36\% & 83.86\% & --- & --- \\
+CNN (Conv1D) & --- & --- & 50-dim: 78.00\% & 128-dim: 83.36\% & 64-dim: 79.07\% \\
+\quad & --- & --- & 100-dim: 76.21\% & 256-dim: 83.79\% & 128-dim: 80.50\% \\
+\quad & --- & --- & 200-dim: 77.93\% & 512-dim: 82.86\% & 256-dim: 79.64\% \\
+\bottomrule
+\end{tabular}
+\caption{Comprehensive comparison of all news classification approaches}
+\label{tab:news_all_comparison}
+\end{table}
+
+The results show that LinearSVC with TF-IDF achieved the highest accuracy at 86.36\%, followed closely by Naive Bayes with CountVectorizer at 86.07\%. For CNN models, BERT embeddings performed best with 83.79\% accuracy, outperforming Word2Vec embeddings (78.00\%). Overall, traditional machine learning approaches with TF-IDF or CountVectorizer proved to be effective for this classification task, with LinearSVC and Naive Bayes both achieving strong results above 85\% accuracy.
+
 \end{document}
 
